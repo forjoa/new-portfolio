@@ -5,6 +5,7 @@ import { MailIcon } from 'lucide-react'
 import { Dock, DockIcon } from '@/components/ui/dock'
 import { cn } from '@/lib/utils'
 import { buttonVariants } from './ui/button'
+import Meteors from './ui/meteors'
 
 export type IconProps = React.HTMLAttributes<SVGElement>
 
@@ -80,11 +81,12 @@ const DATA = {
 
 export function DockMain() {
   return (
-    <div className='relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden '>
-      <span className='pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10'>
+    <div className='relative flex md:h-[500px] h-[300px] w-full flex-col items-center justify-center overflow-hidden '>
+      <Meteors number={30} />
+      <span className='pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center md:text-8xl text-3xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10'>
         Software developer
       </span>
-      <span className='mt-6 text-zinc-400'>
+      <span className='mt-6 text-zinc-400 text-center'>
         Creating any software you could imagine
       </span>
       <div className='relative'>
