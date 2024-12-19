@@ -1,5 +1,5 @@
 import { DockMain } from '@/components/dock-main'
-import Main from '@/components/globals/main'
+import Main from '@/components/ui/main'
 import { MarqueeLanguages } from '@/components/languages'
 import AnimatedGridPattern from '@/components/ui/animated-grid-pattern'
 import BlurIn from '@/components/ui/blur-in'
