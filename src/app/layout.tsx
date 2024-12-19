@@ -29,7 +29,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased ${geistSans.className}`}
       >
-        <nav className='relative flex justify-between items-center rounded border border-zinc-200 shadow-sm p-4 my-10 mx-auto max-w-[800px] backdrop-blur z-10'>
+        <nav className='relative flex justify-between items-center rounded border border-zinc-200 shadow-sm p-4 my-10 mx-auto md:max-w-[800px] w-[80%] backdrop-blur z-10'>
           <section>
             <Link href='/' className='font-bold'>
               <HyperText className='cursor-pointer' text={'<Joa/>'} />
