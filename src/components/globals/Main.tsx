@@ -7,7 +7,7 @@ export default function Main({
   }) {
     return (
       <main
-        className={`${className} max-w-[800px] mx-auto bg-white rounded border backdrop-blur z-10 p-4 shadow-sm`}
+        className={`${className} md:max-w-[800px] w-[80%] mx-auto bg-white rounded border backdrop-blur z-10 p-4 shadow-sm`}
       >
         {children}
       </main>
