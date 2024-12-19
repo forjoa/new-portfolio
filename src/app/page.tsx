@@ -6,6 +6,7 @@ import BlurIn from '@/components/ui/blur-in'
 import DotPattern from '@/components/ui/dot-pattern'
 import ShimmerButton from '@/components/ui/shimmer-button'
 import { cn } from '@/lib/utils'
+import { BestProjects } from '@/components/best-projects'
 
 export type IconProps = React.HTMLAttributes<SVGElement>
 
@@ -54,6 +55,10 @@ export default function Home() {
             'inset-x-0 inset-y-[-30%] h-[200%] skew-y-12'
           )}
         />
+      </Main>
+      <Main className='mt-8'>
+        <p className='text-zinc-400 mb-4'>My best projects</p>
+        <BestProjects />
       </Main>
     </>
   )
