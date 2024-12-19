@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
 import Link from 'next/link'
 import HyperText from '@/components/ui/hyper-text'
+import { Icons } from '@/assets/icons'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -29,6 +30,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased ${geistSans.className}`}
       >
+        <a href='https://github.com/forjoa' target='blank' className='fixed md:right-10 md:bottom-10 right-4 bottom-4 z-50 w-12 h-12 shadow-lg rounded-full bg-white'>
+          <Icons.github className='' />
+        </a>
         <nav className='relative flex justify-between items-center rounded border border-zinc-200 shadow-sm p-4 my-10 mx-auto md:max-w-[800px] w-[80%] backdrop-blur z-10'>
           <section>
             <Link href='/' className='font-bold'>
@@ -51,7 +55,12 @@ export default function RootLayout({
         </nav>
         {children}
         <footer className='md:max-w-[800px] w-[80%] mx-auto mt-8 border-t border-x border-zinc-200 rounded-t p-4'>
-          <p>Made with ❤️ by <a className='underline' href='https://github.com/forjoa'>forjoa</a></p>
+          <p>
+            Made with ❤️ by{' '}
+            <a className='underline' href='https://github.com/forjoa'>
+              forjoa
+            </a>
+          </p>
         </footer>
       </body>
     </html>
