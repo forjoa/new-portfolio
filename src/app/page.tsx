@@ -1,5 +1,5 @@
 import { DockMain } from '@/components/dock-main'
-import Main from '@/components/globals/Main'
+import Main from '@/components/globals/main'
 import { MarqueeLanguages } from '@/components/languages'
 import DotPattern from '@/components/ui/dot-pattern'
 import { cn } from '@/lib/utils'
