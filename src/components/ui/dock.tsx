@@ -2,7 +2,13 @@
 
 import React, { PropsWithChildren, useRef } from 'react'
 import { cva, type VariantProps } from 'class-variance-authority'
-import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion'
+import {
+  motion,
+  MotionValue,
+  useMotionValue,
+  useSpring,
+  useTransform,
+} from 'framer-motion'
 
 import { cn } from '@/lib/utils'
 
@@ -38,12 +44,19 @@ const Dock = React.forwardRef<HTMLDivElement, DockProps>(
     const renderChildren = () => {
       return React.Children.map(children, (child) => {
         if (React.isValidElement(child) && child.type === DockIcon) {
-          return React.cloneElement(child, {
-            ...child.props,
-            mouseX: mouseX,
-            magnification: magnification,
-            distance: distance,
-          })
+          return React.cloneElement(
+            child as React.ReactElement<{
+              mouseX: MotionValue<number>
+              magnification: number
+              distance: number
+            }>,
+            {
+              mouseX: mouseX,
+              magnification: magnification,
+              distance: distance,
+              ...(child.props as object),
+            }
+          )
         }
         return child
       })
@@ -77,6 +90,7 @@ export interface DockIconProps {
   size?: number
   magnification?: number
   distance?: number
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   mouseX?: any
   className?: string
   children?: React.ReactNode
@@ -84,7 +98,6 @@ export interface DockIconProps {
 }
 
 const DockIcon = ({
-  size,
   magnification = DEFAULT_MAGNIFICATION,
   distance = DEFAULT_DISTANCE,
   mouseX: externalMouseX,
