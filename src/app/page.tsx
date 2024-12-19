@@ -15,7 +15,7 @@ export default function Home() {
       <DotPattern
         width={20}
         height={20}
-        cr={0.8}
+        cr={1}
         className={cn(
           '[mask-image:radial-gradient(900px_circle_at_center,white,transparent)]'
         )}
