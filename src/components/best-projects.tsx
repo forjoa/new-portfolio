@@ -48,8 +48,7 @@ const features = [
       'Backend for mobile application about touristic guides built on Spring Boot.',
     href: '/',
     cta: 'Learn more',
-    // eslint-disable-next-line @next/next/no-img-element
-    background: <img className='opacity-60' alt='Empty image' />,
+    background: <div className='opacity-60' />,
     className: 'lg:col-start-3 lg:col-end-3 lg:row-start-1 lg:row-end-2',
   },
   {
