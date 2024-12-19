@@ -50,6 +50,9 @@ export default function RootLayout({
           </section>
         </nav>
         {children}
+        <footer className='md:max-w-[800px] w-[80%] mx-auto mt-8 border-t border-x border-zinc-200 rounded-t p-4'>
+          <p>Made with ❤️ by <a className='underline' href='https://github.com/forjoa'>forjoa</a></p>
+        </footer>
       </body>
     </html>
   )
