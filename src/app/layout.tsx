@@ -45,10 +45,7 @@ export default function RootLayout({
                 <Link href='/'>Home</Link>
               </li>
               <li>
-                <Link href='/#projects'>Projects</Link>
-              </li>
-              <li>
-                <Link href='/#contact'>Contact</Link>
+                <Link href='/about'>About</Link>
               </li>
             </ul>
           </section>
@@ -57,7 +54,7 @@ export default function RootLayout({
         <footer className='md:max-w-[800px] w-[80%] mx-auto mt-8 border-t border-x border-zinc-200 rounded-t p-4'>
           <p>
             Made with ❤️ by{' '}
-            <a className='underline' href='https://github.com/forjoa'>
+            <a className='underline' href='https://github.com/forjoa' target='blank'>
               forjoa
             </a>
           </p>
