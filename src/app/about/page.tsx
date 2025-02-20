@@ -34,8 +34,12 @@ const aboutContent = [
   }
 ]
 
-export default function About({ searchParams }: { searchParams: { filter?: string } }) {
-  const filter = searchParams?.filter || 'all'
+export default async function About(props: {
+  params: Promise<{ slug: string }>
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>
+}) {
+  const searchParams = await props.searchParams
+  const { filter } = searchParams ?? 'all'
 
   return (
     <>
@@ -43,9 +47,9 @@ export default function About({ searchParams }: { searchParams: { filter?: strin
         <p>Filter content</p>
         <p>param: {filter}</p>
 
-        <SelectFilter defaultValue={filter} />
+        <SelectFilter defaultValue={filter as string} />
 
-        {filter !== 'all'
+        {filter && filter !== 'all'
           ? aboutContent
             .filter(c => c.category === filter)
             .map((item, index) => (
