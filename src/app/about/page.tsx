@@ -1,38 +1,7 @@
 import Main from '@/components/ui/main'
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import SelectFilter from '@/components/select-filter'
-
-const aboutContent = [
-  {
-    title: 'About me',
-    description:
-      'I am a software developer with a focus on web development. I am passionate about building things that are useful and easy to use.',
-    category: 'personal',
-  },
-  {
-    title: 'Experience',
-    description:
-      'I have experience in web development, mobile development, and game development.',
-    category: 'professional',
-  },
-  {
-    title: 'Education',
-    description:
-      'I am a student of the Computer Science degree at the Universidad de Costa Rica.',
-    category: 'professional',
-  },
-  {
-    title: 'Skills',
-    description:
-      'I am proficient in JavaScript, TypeScript, React, Next.js, and Tailwind CSS.',
-    category: 'professional',
-  },
-  {
-    title: 'Interests',
-    description:
-      'I am interested in web development, mobile development, and game development.',
-    category: 'personal',
-  }
-]
+import { aboutContent } from '@/assets/about-content'
 
 export default async function About(props: {
   params: Promise<{ slug: string }>
@@ -44,26 +13,27 @@ export default async function About(props: {
   return (
     <>
       <Main>
-        <p>Filter content</p>
-        <p>param: {filter}</p>
+        <div className='w-full flex justify-end mb-4'>
+          <SelectFilter defaultValue={filter as string} />
+        </div>
 
-        <SelectFilter defaultValue={filter as string} />
-
-        {filter && filter !== 'all'
-          ? aboutContent
-            .filter(c => c.category === filter)
-            .map((item, index) => (
-              <div key={index} className='mb-4'>
-                <p>{item.title}</p>
-                <p>{item.description}</p>
-              </div>
-            ))
-          : aboutContent.map((item, index) => (
-            <div key={index} className='mb-4'>
-              <p>{item.title}</p>
-              <p>{item.description}</p>
-            </div>
-          ))}
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {(filter && filter !== "all" ? aboutContent.filter((c) => c.category === filter) : aboutContent).map(
+            (item) => (
+              <Card key={item.id} className="group transition-all hover:shadow-lg dark:hover:shadow-primary/5">
+                <CardHeader className='flex flex-col gap-4'>
+                  <CardTitle>{item.title}</CardTitle>
+                  <div className="w-full flex justify-end">
+                    <p className={`border rounded py-2 px-4 ${item.category == 'personal' ? 'text-green-500 bg-green-500/10' : 'text-blue-500 bg-blue-500/10'}`}>{item.category}</p>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">{item.description}</p>
+                </CardContent>
+              </Card>
+            ),
+          )}
+        </div>
       </Main>
     </>
   )
