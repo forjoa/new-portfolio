@@ -3,6 +3,26 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import SelectFilter from '@/components/select-filter'
 import { aboutContent } from '@/assets/about-content'
 
+const content = {
+  placeholder: 'Select a category',
+  label: 'Categories',
+  items: [
+    {
+      value: 'all',
+      label: 'All',
+    },
+    {
+      value: 'personal',
+      label: 'Personal',
+    },
+    {
+      value: 'professional',
+      label: 'Professional',
+    },
+  ],
+  tooltip: 'Select a category information'
+}
+
 export default async function About(props: {
   params: Promise<{ slug: string }>
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>
@@ -14,7 +34,7 @@ export default async function About(props: {
     <>
       <Main>
         <div className='w-full flex justify-end mb-4'>
-          <SelectFilter defaultValue={filter as string} />
+          <SelectFilter defaultValue={filter as string} content={content} />
         </div>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
