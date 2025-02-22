@@ -1,5 +1,6 @@
 import SelectFilter from "@/components/select-filter"
 import Main from "@/components/ui/main"
+import ShimmerButton from "@/components/ui/shimmer-button"
 
 const content = {
     label: 'Languages',
@@ -35,14 +36,13 @@ export default async function CVPage(props: {
                 src={`/newResume${filter != 'es' || filter == undefined ? '-' + filter : ''}.pdf`}
                 className="w-full h-[80vh] border rounded-lg"
             />
-            <div className="flex justify-end">
-                <a
-                    href="/newResume.pdf"
-                    download
-                    className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
-                >
-                    Download CV
-                </a>
+            <div className="flex justify-end mt-4">
+                <ShimmerButton className='shadow-2xl'>
+                    <span className='whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg'>
+                        <a href={`/newResume${filter != 'es' || filter == undefined ? '-' + filter : ''}.pdf`}
+                            download className="z-60">Download resume</a>
+                    </span>
+                </ShimmerButton>
             </div>
         </Main>
     )
