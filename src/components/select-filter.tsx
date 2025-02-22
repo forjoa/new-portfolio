@@ -8,9 +8,10 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip"
+import { FilterI } from '@/lib/types'
 
 
-export default function SelectFilter({ defaultValue }: { defaultValue: string }) {
+export default function SelectFilter({ defaultValue, content }: { defaultValue: string, content: FilterI }) {
   const router = useRouter()
 
   return (
@@ -22,20 +23,22 @@ export default function SelectFilter({ defaultValue }: { defaultValue: string })
             onValueChange={(value) => router.push(`?filter=${value}`)}
           >
             <SelectTrigger className="w-[200px] text-base">
-              <SelectValue placeholder="Select a category" />
+              <SelectValue placeholder={content.placeholder} />
             </SelectTrigger>
             <SelectContent>
               <SelectGroup>
-                <SelectLabel>Categories</SelectLabel>
-                <SelectItem value="all">All</SelectItem>
-                <SelectItem value="personal">Personal</SelectItem>
-                <SelectItem value="professional">Professional</SelectItem>
+                <SelectLabel>{content.label}</SelectLabel>
+                {content.items.map((item) => (
+                  <SelectItem key={item.value} value={item.value}>
+                    {item.label}
+                  </SelectItem>
+                ))}
               </SelectGroup>
             </SelectContent>
           </Select>
         </TooltipTrigger>
         <TooltipContent>
-          <p className='text-base'>Select a category information</p>
+          <p className='text-base'>{content.tooltip}</p>
         </TooltipContent>
       </Tooltip>
     </TooltipProvider>
