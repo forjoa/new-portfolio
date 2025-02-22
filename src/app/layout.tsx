@@ -33,7 +33,7 @@ export default function RootLayout({
         <a href='https://github.com/forjoa' target='blank' className='fixed md:right-10 md:bottom-10 right-4 bottom-4 z-50 w-12 h-12 shadow-lg rounded-full bg-white'>
           <Icons.github className='' />
         </a>
-        <nav className='relative flex justify-between items-center rounded border border-zinc-200 shadow-sm p-4 my-10 mx-auto md:max-w-[800px] w-[80%] backdrop-blur z-10'>
+        <nav className='relative flex justify-between items-center rounded border border-zinc-200 shadow-sm p-4 my-6 mx-auto md:max-w-[800px] w-[90%] backdrop-blur z-10'>
           <section>
             <Link href='/' className='font-bold'>
               <HyperText className='cursor-pointer' text={'<Joa/>'} />
