@@ -47,6 +47,9 @@ export default function RootLayout({
               <li>
                 <Link href='/about'>About me</Link>
               </li>
+              <li>
+                <Link href='/cv'>Resume</Link>
+              </li>
             </ul>
           </section>
         </nav>
