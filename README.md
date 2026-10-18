@@ -1,21 +1,17 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
 # My portfolio
 
-This is a new version of my portfolio based on Next.js 15 and React.js 19. Using SSR to get a better performace in the web.
+This is a new version of my portfolio based on Next.js 15 and React.js 19. Using SSR to get a better performance in the web.
 
-## Instalation
+## Installation
 
 First you have to clone the repository.
 
-`git clone TODO`
+`git clone https://github.com/forjoa/new-portfolio.git`
 
-Then you have to install all the necesary dependencies.
+Then you have to install all the necessary dependencies.
 
-`npm install`
+`pnpm install`
 
-And then just the project locally.
+And then just run the project locally.
 
-`npm run dev`
-
-Those are explanations with `npm` but you can use whatever you want like bun or pnpm.
+`pnpm dev`
