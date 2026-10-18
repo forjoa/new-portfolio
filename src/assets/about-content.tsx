@@ -37,62 +37,32 @@ export const aboutContent = [
     },
     {
         id: 7,
-        title: "Mastering Web Fundamentals",
-        description: "My journey began by mastering pure HTML and CSS, creating complex layouts without relying on frameworks. This foundational knowledge allowed me to delve deep into browser rendering processes, enabling me to optimize the Critical Rendering Path effectively. By focusing on these optimizations, I achieved a remarkable 40% improvement in application performance. This experience underscored the importance of understanding the core building blocks of the web, empowering me to create efficient and high-performing applications from the ground up.",
+        title: "From Web Developer to AI Engineer",
+        description: "I started as a fullstack developer, building web apps and APIs with Next.js, Node.js, Spring Boot and PHP. Today I work as an AI Engineer, and that background is what lets me take AI from a notebook to a real product: typed APIs, solid databases, clean deployments and interfaces people actually enjoy using.",
         category: "professional"
     },
     {
         id: 8,
-        title: "Building Dynamic Applications",
-        description: "Leveraging the power of JavaScript and TypeScript, I've developed scalable enterprise applications by implementing well-established design patterns such as Observer and Factory. Emphasizing strict typing and robust code structures, I managed to reduce production errors by an impressive 65%. This approach not only enhanced the reliability of the applications but also facilitated easier maintenance and scalability, ensuring that the solutions remain robust and adaptable to evolving business needs.",
+        title: "Document Intelligence Pipelines",
+        description: "I built an Intelligent Document Processing API with FastAPI that receives a PDF and returns structured data. It runs OCR with Tesseract and PyMuPDF, classifies the document type, extracts the relevant fields with spaCy, and stores sentence-transformer embeddings in PostgreSQL with pgvector, so every processed document can be found later through natural-language semantic search.",
         category: "professional"
     },
     {
         id: 9,
-        title: "React Component Architecture",
-        description: "I spearheaded the design of a reusable component system utilizing React, which significantly accelerated the development of new features by 30%. By implementing advanced conditional rendering techniques and optimizing the rendering process, I ensured that the application remained performant even as complexity increased. This modular approach promoted code reuse and consistency across the project, streamlining the development workflow and enhancing overall productivity.",
+        title: "Connecting LLMs to the Real World with MCP",
+        description: "I develop Model Context Protocol servers that give AI assistants access to real data. One of them reverse-engineers the Groupon Spain GraphQL API, manages browser sessions with headless Chromium, and exposes six tools to search, compare and analyse deals across 12 Spanish cities directly from Claude Desktop or Cursor.",
         category: "professional"
     },
     {
         id: 10,
-        title: "Fullstack with Next.js",
-        description: "Leading the migration of a legacy application to Next.js 15, I implemented Server-Side Rendering (SSR) and Incremental Static Regeneration (ISR) to enhance performance and scalability. This strategic transition resulted in a dramatic reduction of First Contentful Paint (FCP) from 2.1 seconds to a mere 380 milliseconds. Additionally, the application's SEO score saw a substantial improvement, soaring from 65 to an impressive 98 out of 100. This transformation not only elevated user experience but also bolstered the application's visibility and accessibility.",
+        title: "Conversational AI for Businesses",
+        description: "I design AI receptionists that answer customers using the business's own information: services, prices, opening hours and bookings. The chatbots run on Next.js with a serverless API route that proxies LLM calls through OpenRouter, keeping the model grounded on the data it is given instead of making things up.",
         category: "professional"
     },
     {
         id: 11,
-        title: "Styling at Industrial Scale",
-        description: "By adopting Tailwind CSS, I developed a themable design system that has been successfully implemented in over 15 projects. To maintain consistency across large and diverse codebases, I created custom plugins that enforced design standards and streamlined the development process. This approach ensured a cohesive visual identity across all applications and facilitated efficient scaling and maintenance of the styling framework.",
-        category: "professional"
-    },
-    {
-        id: 12,
-        title: "Enterprise Backend with Java",
-        description: "I engineered Spring Boot microservices incorporating fault tolerance mechanisms and circuit breakers to ensure system resilience. By designing RESTful APIs capable of handling over 5,000 requests per minute with response times consistently under 200 milliseconds, I ensured that the backend infrastructure could support high-demand scenarios efficiently. This robust architecture provided a reliable foundation for enterprise-level applications, meeting stringent performance and reliability requirements.",
-        category: "professional"
-    },
-    {
-        id: 13,
-        title: "Database Optimization",
-        description: "In restructuring PostgreSQL schemas for a financial application, I focused on optimizing data retrieval and storage efficiency. By implementing partitioning strategies and creating GIN indexes for complex search operations, I successfully reduced query times from 850 milliseconds to an astonishing 12 milliseconds. This optimization not only enhanced application performance but also improved user satisfaction by providing faster and more reliable data access.",
-        category: "professional"
-    },
-    {
-        id: 14,
-        title: "DevOps in Action",
-        description: "Embracing a DevOps culture, I containerized applications using Docker, which facilitated consistent environments across development, testing, and production stages. By optimizing Continuous Integration and Continuous Deployment (CI/CD) pipelines, I reduced deployment times from 25 minutes to just 3 minutes. Additionally, I implemented blue-green deployment strategies to ensure zero-downtime updates, allowing seamless feature rollouts and minimizing disruption to users.",
-        category: "professional"
-    },
-    {
-        id: 15,
-        title: "Legacy Systems Management",
-        description: "Managing legacy code presents unique challenges, and I tackled them by systematically refactoring PHP-based applications. By implementing SOLID principles and well-established design patterns, I reduced technical debt by 40% while maintaining full backward compatibility. This approach not only improved code maintainability but also allowed for gradual modernization without disrupting existing workflows.",
-        category: "professional"
-    },
-    {
-        id: 16,
-        title: "Microservices Architecture",
-        description: "I designed and implemented a microservices-based architecture using Node.js, focusing on separation of concerns and high availability. By integrating CQRS (Command Query Responsibility Segregation) and Event Sourcing, I ensured data consistency and scalability across distributed systems. As a result, the platform achieved a 99.98% uptime, supporting critical business operations with maximum reliability.",
+        title: "Automation & Data Products",
+        description: "I enjoy removing manual work. Spendly captures financial transactions and processes them automatically (Next.js, Neon PostgreSQL, Drizzle, Better Auth); I also built a dashboard to manage n8n workflows, and DataForge, an open source playground to solve data challenges on real HuggingFace and Kaggle datasets right in the browser.",
         category: "professional"
     }
 ]
