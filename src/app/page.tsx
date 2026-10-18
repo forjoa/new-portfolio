@@ -31,12 +31,12 @@ export default function Home() {
       </Main>
       <Main className='mt-8 py-8 h-auto overflow-hidden'>
         <BlurIn
-          word='Do you want to develop something?'
+          word='Do you want to automate something?'
           className='pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-2xl md:text-4xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10'
           duration={2}
         />
         <BlurIn
-          word='Do you need any software?'
+          word='Do you need an AI solution?'
           className='mt-4 pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-2xl md:text-4xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10'
           duration={4}
         />

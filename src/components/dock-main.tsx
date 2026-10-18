@@ -39,10 +39,10 @@ export function DockMain() {
     <div className='relative flex md:h-[500px] h-[300px] w-full flex-col items-center justify-center overflow-hidden '>
       <Meteors number={30} />
       <span className='pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center md:text-8xl text-3xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10'>
-        Software developer
+        AI Engineer
       </span>
       <span className='mt-6 text-zinc-400 text-center'>
-        Creating any software you could imagine
+        Building AI products that solve real problems
       </span>
       <div className='relative'>
         <Dock direction='middle'>
