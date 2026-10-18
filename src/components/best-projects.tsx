@@ -3,64 +3,61 @@ import Safari from './ui/safari'
 
 const features = [
   {
-    name: 'Talk',
+    name: 'AI Receptionist',
     description:
-      'Real time chat web application built on Next.js, WebSockets and Turso.',
-    href: 'https://talk-axvc.onrender.com/login',
+      'LLM-powered customer service chatbots for a clinic and a restaurant, grounded on business data.',
+    href: 'https://chatbots-lemon.vercel.app',
     cta: 'Learn more',
     background: (
       <Safari
         className='mx-auto mt-auto w-[86%] h-full'
-        imageSrc='https://joa-dev-portfolio.vercel.app/assets/talk-1de3f52d.png'
+        imageSrc='/projects/chatbots.png'
       />
     ),
     className: 'lg:row-start-1 lg:row-end-4 lg:col-start-2 lg:col-end-3',
   },
   {
-    name: 'Bloginary',
-    description: 'Blog web application built on Astro and React.js.',
-    href: 'https://bloginary.vercel.app/',
+    name: 'Intelligent Document Processing',
+    description:
+      'FastAPI pipeline that OCRs PDFs, classifies them, extracts structured fields and enables semantic search with pgvector.',
+    href: 'https://intelligent-document-processing-eosin.vercel.app',
     cta: 'Learn more',
     background: (
       <Safari
         className='mx-4 mt-4 w-[86%] h-full'
-        imageSrc='https://res.cloudinary.com/drqv0jv7c/image/upload/fl_preserve_transparency/v1734616586/Captura_de_pantalla_2024-12-19_145759_t1bfxn.jpg?_s=public-apps'
+        imageSrc='/projects/idp.png'
       />
     ),
     className: 'lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-3',
   },
   {
-    name: 'Bonds backend',
-    description: 'Node.js & Typescript backend API for Bonds social media app.',
-    href: 'https://github.com/forjoa/bonds-backend/blob/main/src/index.ts',
+    name: 'MCP Groupon Deals',
+    description:
+      'MCP server that lets AI assistants search, compare and analyse Groupon Spain deals.',
+    href: 'https://github.com/forjoa/mcp-groupon-deals',
     cta: 'Learn more',
-    background: (
-      <Safari
-        className='mx-4 mt-4 w-[86%] h-full md:hidden block'
-        imageSrc='https://res.cloudinary.com/drqv0jv7c/image/upload/fl_preserve_transparency/v1734617756/Captura_de_pantalla_2024-12-19_151721_eucdqz.jpg?_s=public-apps'
-      />
-    ),
+    background: <div className='opacity-60' />,
     className: 'lg:col-start-1 lg:col-end-2 lg:row-start-3 lg:row-end-4',
   },
   {
-    name: 'Tu Guía Virtual backend',
+    name: 'Spendly',
     description:
-      'Backend for mobile application about touristic guides built on Spring Boot.',
-    href: '/',
+      'SaaS that captures financial transactions and processes them automatically.',
+    href: 'https://github.com/forjoa/spendly',
     cta: 'Learn more',
     background: <div className='opacity-60' />,
     className: 'lg:col-start-3 lg:col-end-3 lg:row-start-1 lg:row-end-2',
   },
   {
-    name: 'Trackshare',
+    name: 'DataForge',
     description:
-      'Web application that allows you to share your song link in a single link.',
-    href: 'https://trackshare-ruddy.vercel.app/',
+      'Open source playground to solve data challenges on real datasets, right in the browser.',
+    href: 'https://dataforge-beta.vercel.app',
     cta: 'Learn more',
     background: (
       <Safari
         className='mx-4 mt-4 w-[86%] h-full'
-        imageSrc='https://joa-dev-portfolio.vercel.app/assets/trackshare-eedf75fb.png/'
+        imageSrc='/projects/dataforge.png'
       />
     ),
     className: 'lg:col-start-3 lg:col-end-3 lg:row-start-2 lg:row-end-4',
