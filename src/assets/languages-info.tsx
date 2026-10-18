@@ -29,6 +29,10 @@ export const languages = {
   ],
   backend: [
     {
+      name: 'Python',
+      icon: Icons.backend.python,
+    },
+    {
       name: 'Java',
       icon: Icons.backend.java,
     },
